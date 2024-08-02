@@ -2,9 +2,6 @@
 using APIBingo.Application.Interfaces;
 using APIBingo.Domain.Entities;
 using APIBingo.Domain.IRepositories;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace APIBingo.Application.Services
 {
@@ -39,6 +36,7 @@ namespace APIBingo.Application.Services
                 var bingoNumber = new BingoNumber
                 {
                     ClientId = bingoNumberRequest.ClientId,
+                    UserId = bingoNumberRequest.UserId,
                     ProductId = bingoNumberRequest.ProductId,
                     Number = nextNumber,
                     CreationDate = DateTime.UtcNow,
